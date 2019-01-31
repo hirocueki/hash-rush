@@ -1,0 +1,8 @@
+= form_with url: homes_path do |form|
+  = form.text_field :message
+  = form.submit
+  
+- if @request_url.present?
+  .qrcode= qrcode_tag @request_url, size: 4, level: :h
+  .web= link_to @request_url, @request_url
+  .new= link_to '新しく作る', root_path
