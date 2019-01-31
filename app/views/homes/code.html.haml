@@ -1,8 +1,18 @@
-= form_with url: homes_path do |form|
-  = form.text_field :message
-  = form.submit
-  
-- if @request_url.present?
-  .qrcode= qrcode_tag @request_url, size: 4, level: :h
-  .web= link_to @request_url, @request_url
-  .new= link_to '新しく作る', root_path
+.row.mt-5
+  .col-md-2
+  .col-md-10
+    = form_with url: homes_path do |form|
+      .field
+        = form.text_field :message, placeholder: "#ハッシュタグ #HashTag", class: 'form-control'
+      .actions.text-right
+        = form.submit 'QRコードにする', class: 'btn btn-primary mt-1'
+
+.row
+  .col-md-2
+  .col-md-10
+    - if @request_url.present?
+      %h1= "「#{@hash_tag}」"
+      .qrcode.mt-5= qrcode_tag @request_url, size: 4
+      %hr
+      .web= link_to 'PC用リンク', @request_url
+      .new= link_to '新しく作る', root_path, class: 'btn btn-primary mt-1'
