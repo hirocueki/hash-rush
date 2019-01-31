@@ -9,3 +9,4 @@
 - メッセージ部分のエンコード（UTF8）
 - QRコードをつくる
 
+https://hash-rush.herokuapp.com/
