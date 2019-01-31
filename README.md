@@ -1,1 +1,1 @@
-# hash-rash
+# hash-rush
