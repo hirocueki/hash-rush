@@ -11,7 +11,9 @@
   .col-md-2
   .col-md-10
     - if @request_url.present?
-      %h1= "「#{@hash_tag}」"
+      %h1
+        = icon('fab', 'twitter')
+        = "#{@hash_tag}"
       .qrcode.mt-5= qrcode_tag @request_url, size: 4
       %hr
       .web= link_to 'PC用リンク', @request_url
