@@ -19,4 +19,5 @@
 - メッセージ部分のエンコード（UTF8）
 - QRコードをつくる
 
+### アプリURL
 https://hash-rush.herokuapp.com/
